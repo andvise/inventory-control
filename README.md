@@ -1,8 +1,11 @@
-# RsS-EJOR
+# Inventory Control - RsS
 
 ## Introduction
-This is the code related to the paper:
-Andrea Visentin and Steven Prestwich and Roberto Rossi and S Armagan Tarim: *Computing Optimal (R,s,S) Policy Parameters by a Hybrid of Branch-and-Bound and Stochastic Dynamic Programming*, in European Journal of Operational Research, Under review.
+This repository contains a set of inventory control algorithms used in the following publications:
+ * Visentin, Andrea. Computing policy parameters for stochastic inventory control using stochastic dynamic programming approaches. Diss. University College Cork, 2020.
+ * Visentin, Andrea, et al. "Computing optimal (R, s, S) policy parameters by a hybrid of branch-and-bound and stochastic dynamic programming." European Journal of Operational Research 294.1 (2021): 91-99. 
+* Visentin, Andrea, et al. "Stochastic Dynamic Programming Heuristic for the (R, s, S) Policy Parameters Computation." arXiv preprint arXiv:2202.08803 (2022).
+
 
 ## Structure
 The structure of the repository is organised as follow
