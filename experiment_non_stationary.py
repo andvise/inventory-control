@@ -3,7 +3,7 @@ import random
 from util import instance
 from util import policy as pol
 from util import simulator
-from solvers.RsS import rss_branch_and_bound_sdp, rss_brute_force_baseline, rss_binary_tree_sdp
+from solvers.RsS import rss_branch_and_bound_sdp, rss_brute_force_baseline, rss_binary_tree_sdp, rss_sdp_kcov_memo
 
 
 # use these list of seeds to make the simulation replicable. The simulation number is the length
@@ -43,15 +43,28 @@ solvers = []
 
 ## Baseline
 solvers.append(rss_brute_force_baseline.RsS_BruteForceBaseline())
+solvers.append(sol)
+
 ## Binary tree
 solvers.append(rss_binary_tree_sdp.RsS_BinaryTreeSDP())
+solvers.append(sol)
+
 ## B&B
 solvers.append(rss_branch_and_bound_sdp.RsS_BranchAndBound())
+solvers.append(sol)
+
+## B&B random
+sol = rss_branch_and_bound_sdp.RsS_BranchAndBound()
+solvers.append(sol)
+
 ## B&B random
 sol = rss_branch_and_bound_sdp.RsS_BranchAndBound()
 sol.use_random = True
 solvers.append(sol)
 
+## SDP
+sol = rss_sdp_kcov_memo.RsS_SDP_KConv_Memo()
+solvers.append(sol)
 
 print("\n######################"
       "\nSTARTING SOLVING PHASE"
